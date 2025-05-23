@@ -1,4 +1,7 @@
+"use client"
 import React from "react";
+//import { MotionTransition } from "../MotionTransition";
+import { Reveal } from "../Reveal";
 
 export function HeroSection()  {
   return (
@@ -16,13 +19,35 @@ export function HeroSection()  {
         className="absolute inset-0 bg-black opacity-80 z-0" // Cubre toda la sección con opacidad para mejor legibilidad
       ></div>
       <div className="relative z-10 mx-auto max-w-3xl">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tght">
-          Redescubre tu Fuerza. Domina tu Movimiento
+        <Reveal>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+            Redescubre tu{" "} <span style={{
+      backgroundImage: "linear-gradient(90deg, #fb923c 0%, rgba(255, 237, 213, 0.86) 95.83%)",
+      WebkitBackgroundClip: "text", // Prefijo para compatibilidad con algunos navegadores (especialmente Webkit)
+      backgroundClip: "text",
+      color: "transparent",
+    }}>Fuerza</span>{" "} <span style={{
+      backgroundImage: "linear-gradient(90deg, #fb923c 0%, rgba(255, 237, 213, 0.86) 95.83%)",
+      WebkitBackgroundClip: "text", // Prefijo para compatibilidad con algunos navegadores (especialmente Webkit)
+      backgroundClip: "text",
+      color: "transparent",
+    }}>Domina</span> tu Movimiento
         </h1>
-        <p className="text-lg sm:text-xl md:txt-2xl mb-10">
-          Transforma tu cuerpo y libera tu máximo potencial físico con Ground y Entrenamiento Funcional bajo una metodología ÚNICA
+        </Reveal>
+        <Reveal>
+          <p className="text-lg sm:text-xl md:txt-2xl mb-10">
+          Transforma tu cuerpo y libera tu máximo potencial físico con <span style={{
+      backgroundImage: "linear-gradient(90deg, #fb923c 0%, rgba(255, 237, 213, 0.86) 95.83%)",
+      WebkitBackgroundClip: "text",
+      backgroundClip: "text",
+      color: "transparent",
+    }}>Ground y Entrenamiento Funcional</span> bajo una metodología ÚNICA
         </p>
-        <p className="mb-10">Prepárate para moverte mejor, sentirte más fuerte y vivir con más energía que nunca</p>
+        </Reveal>
+        <Reveal>
+          <p className="mb-10">Prepárate para moverte mejor, sentirte más fuerte y vivir con más energía que nunca</p>
+        </Reveal>
+
         <button 
           className="
             bg-orange-400 hover:bg-orange-600
