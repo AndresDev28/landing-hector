@@ -1,26 +1,27 @@
-import { HeroSection } from "@/Components/HeroSection";
-import { ProblemSolution } from "@/Components/ProblemSolution";
-import { AboutHector } from "@/Components/AboutHector";
-import { TrainingSystem } from "@/Components/TrainingSystem";
-import { Benefits } from "@/Components/Benefits";
-import { Testimonials } from "@/Components/Testimonials";
-import { WhoIsThisFor } from "@/Components/WhoIsThisFor";
-import { FinalCta } from "@/Components/FinalCta";
-import { Footer } from "@/Components/Footer";
+//import { BestBusiness } from "@/components/BestBusiness";
+import { BestBusiness } from "@/components/BestBusiness";
+import { ChooseYourCards } from "@/components/ChooseYourCards";
+import { ControlBilling } from "@/components/ControlBilling";
+import { CounterData } from "@/components/CounterData";
+import FirstBlock from "@/components/FirstBlock/FirstBlock";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { PaymentsMethods } from "@/components/PaymentsMethods";
+import { Testimonials } from "@/components/Testimonials";
 
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main >
-      <HeroSection />
-      <ProblemSolution />
-      <AboutHector />
-      <TrainingSystem />
-      <Benefits />
+    <>
+      <Header />
+      <FirstBlock />
+      <CounterData />
+      <BestBusiness />
+      <ChooseYourCards />
+      <ControlBilling />
       <Testimonials />
-      <WhoIsThisFor />
-      <FinalCta />
+      <PaymentsMethods />
       <Footer />
-    </main>
-  );
+    </>
+  )
 }

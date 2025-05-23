@@ -1,9 +1,9 @@
 "use client"
-import { useAnimation, useInView, motion } from "motion/react"
+import { useAnimation, useInView, motion } from "framer-motion"
 import { useRef, useEffect } from "react"
 
 export function Reveal({children}: {children: React.ReactNode}) {
-
+  
   const ref = useRef(null)
   const isInView = useInView(ref, { once:false})
   const mainControls = useAnimation()
@@ -14,15 +14,17 @@ export function Reveal({children}: {children: React.ReactNode}) {
       mainControls.start("visible")
       slideControls.start("visible")
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView])
-
+  
+  
+  
   return (
     <div ref={ref} className="relative overflow-hidden w-fit">
-      <motion.div
-        variants={{
-          hidden: {opacity: 0, y: 75},
-          visible: {opacity: 1, y: 0}
+      <motion.div 
+        variants= {{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 }
       }}
         initial="hidden"
         animate={mainControls}
@@ -33,24 +35,25 @@ export function Reveal({children}: {children: React.ReactNode}) {
       </motion.div>
       <motion.div
         variants= {{
-            hidden: { left: 0 },
-            visible: { left: "100%", }
-        }}
-        initial="hidden"
-        animate={slideControls}
-        transition={{duration: 0.5, ease: "easeIn"}}
-        style={{
-          position: "absolute",
-          top: 4,
-          bottom: 4,
-          left: 0,
-          right: 0,
-          background: "#fb923c",
-          zIndex: 20
-        }}
+          hidden: { left: 0 },
+          visible: { left: "100%", }
+      }}
+      initial="hidden"
+      animate={slideControls}
+      transition={{duration: 0.5, ease: "easeIn"}}
+      style={{
+        position: "absolute",
+        top: 4,
+        bottom: 4,
+        left: 0,
+        right: 0,
+        background: "#6DE4EB",
+        zIndex: 20
+      }}
       >
-      </motion.div>
 
+      </motion.div>
+      
     </div>
   )
 }

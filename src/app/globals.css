@@ -1,24 +1,7 @@
-@import "tailwindcss";
-/* @import "tailwindcss/preflight"; */
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
 html {
   scroll-behavior: smooth;
 }
@@ -29,10 +12,10 @@ body {
 }
 
 ::selection {
-  background: orange;
+  background: #6de4e8;
 }
 
-.degradedOrange {
+.degradedBlue {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -44,7 +27,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background: rgba(218, 84, 0, 0.659) !important;
+  background: rgba(0, 178, 218, 0.6) !important;
 }
 
 .slider-horizontal {
