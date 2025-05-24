@@ -12,10 +12,10 @@ body {
 }
 
 ::selection {
-  background: #6de4e8;
+  background: #fb923c;
 }
 
-.degradedBlue {
+.degradedOrange {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -27,7 +27,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background: rgba(0, 178, 218, 0.6) !important;
+  background: rgba(251, 146, 60, 0.6) !important;
 }
 
 .slider-horizontal {
